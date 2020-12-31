@@ -4,6 +4,7 @@ const { ExpressAdapter } = require('ask-sdk-express-adapter');
 const Alexa = require('ask-sdk-core')
 const skillBuilder = Alexa.SkillBuilders.custom();
 const fs = require('fs');
+var serveIndex = require('serve-index');
 
 let filebuffer=[];
 let filebuffername=[];
@@ -13,6 +14,7 @@ const LaunchRequestHandler = {
       return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
+      console.log("Launched")
       const speechText = 'Launching Upload File, the skill for sending verbally encoded files through Alexa.';
 
       return handlerInput.responseBuilder
@@ -78,7 +80,7 @@ const AddByteIntentHandler = {
   handle(handlerInput) {
       var asciival = Alexa.getSlotValue(handlerInput.requestEnvelope, 'number')
       var endsession=false
-      console.log( asciival)
+      console.log("Received "+ asciival)
       if (asciival == 2000) {
         speechText = 'Done.  Goodbye.';
         endsession=true
@@ -111,6 +113,9 @@ skillBuilder.addErrorHandler(
 const skill = skillBuilder.create();
 
 const adapter = new ExpressAdapter(skill, false, false);
+
+app.use('/files', express.static(__dirname + '/files'));
+app.use('/files', serveIndex(__dirname + '/files'));
 
 app.post('/', adapter.getRequestHandlers());
  
@@ -149,6 +154,7 @@ function writefile() {
 
     fs.writeFile(filepath,data,Uint8Array,  function (err) {
         if (err) return console.log(err.message);
+        console.log("File '"+filename+"' received. Closing session.")
       });
 }
 

@@ -69,11 +69,11 @@ function launchuploadfileskill() {
                     soundfiletoplay='./media/pause.mp3'
                     currentdigit++;        
                 }
-                else if (currentdigit==0) {
+                else if (currentdigit==1) {
                     soundfiletoplay='./media/addbyte.mp3'
                     currentdigit++;        
                 }
-                else if (currentdigit==1) {
+                else if (currentdigit==2) {
                     if (filebuffer[currentbyte]>=1000) {
                         soundfiletoplay=getfilename(Math.floor(filebuffer[currentbyte]/1000)%10)
                     }
@@ -82,7 +82,7 @@ function launchuploadfileskill() {
                     }
                     currentdigit++;        
                 }
-                else if (currentdigit==2) {
+                else if (currentdigit==3) {
                     if (filebuffer[currentbyte]>=100) {
                         soundfiletoplay=getfilename(Math.floor(filebuffer[currentbyte]/100)%10)        
                     }
@@ -91,7 +91,7 @@ function launchuploadfileskill() {
                     }
                     currentdigit++;        
                 }
-                else if (currentdigit==3) {
+                else if (currentdigit==4) {
                     if (filebuffer[currentbyte]>=10) {
                         soundfiletoplay=getfilename(Math.floor(filebuffer[currentbyte]/10)%10)        
                     }
@@ -100,7 +100,7 @@ function launchuploadfileskill() {
                     }
                     currentdigit++;        
                 }
-                else if (currentdigit==4) {
+                else if (currentdigit==5) {
                     if (filebuffer[currentbyte]>=0) {
                         soundfiletoplay=getfilename(filebuffer[currentbyte]%10)        
                         currentbyte++;        
