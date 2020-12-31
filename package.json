@@ -1,0 +1,20 @@
+{
+  "name": "vaftp",
+  "version": "1.0.0",
+  "description": "Voice Assistant File Transfer Protocol: Encodes files verbally and transfers them using the Alexa voice assistant",
+  "main": "vaftp-client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Audette",
+  "license": "MIT",
+  "dependencies": {
+    "ask-sdk-core": "^2.10.1",
+    "ask-sdk-express-adapter": "^2.10.0",
+    "ask-sdk-model": "^1.34.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "play-sound": "^1.1.3"
+  }
+}
