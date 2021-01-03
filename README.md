@@ -5,7 +5,7 @@ For more information about this project, see [https://articles.hotelexistence.ca
 
 ## Introduction
 
-I have created a Voice Assistant File Transfer Protocol for Alexa-powered voice assistants, like the Amazon Echo.  The protocol uses verbal encoding to transfer the file through Alexa - it is not the control an external file transfer application.  I have developed a proof of concept, which includes a client application, a server application, and an Alexa Skill.  The client encodes a binary file as english words, launches an Alexa Skill and verbally sends the data through the PC's speakers to an Amazon Echo device.  The server decodes the words, saves the binary file, and makes it available on the Internet.
+I have created a Voice Assistant File Transfer Protocol for Alexa-powered voice assistants, like the Amazon Echo.  The protocol uses verbal encoding to transfer the file through Alexa - it is not the control an external file transfer application.  I have developed a proof of concept, which includes a client application, a server application, and an Alexa Skill.  The client encodes a binary file as English words, launches an Alexa Skill and verbally sends the data through the PC's speakers to an Amazon Echo device.  The server decodes the words, saves the binary file, and makes it available on the Internet.
 
 ## Code
 
