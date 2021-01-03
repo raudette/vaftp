@@ -1,7 +1,7 @@
 {
   "name": "vaftp",
   "version": "1.0.0",
-  "description": "Voice Assistant File Transfer Protocol: Encodes files verbally and transfers them using the Alexa voice assistant",
+  "description": "Voice Assistant File Transfer Protocol: Encodes files verbally and transfers them through the Alexa voice assistant",
   "main": "vaftp-client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
