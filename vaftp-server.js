@@ -155,14 +155,10 @@ function writefile() {
     fs.writeFile(filepath,data,Uint8Array,  function (err) {
         if (err) return console.log(err.message);
         console.log("File '"+filename+"' received. Closing session.")
+        //clear arrays
+        filebuffer.length=0;
+        filebuffername.length=0;
       });
 }
-
-function done() {
-    console.log('Done');
-    //clear arrays
-    filebuffer.length=0;
-    filebuffername.length=0;
-}    
 
 app.listen(8080)
