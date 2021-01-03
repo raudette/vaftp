@@ -128,16 +128,16 @@ function launchuploadfileskill() {
 
 function getfilename(number) {
     switch (number) {
-        case 0: return './media/zero.mp3'
-        case 1: return './media/one.mp3'
-        case 2: return './media/two.mp3'
-        case 3: return './media/three.mp3'
-        case 4: return './media/four.mp3'
-        case 5: return './media/five.mp3'
-        case 6: return './media/six.mp3'
-        case 7: return './media/seven.mp3'
-        case 8: return './media/eight.mp3'
-        case 9: return './media/nine.mp3'
+        case 0: return './media/zero_en_us_1.mp3'
+        case 1: return './media/one_en_us_1.mp3'
+        case 2: return './media/two_en_us_1.mp3'
+        case 3: return './media/three_en_us_1.mp3'
+        case 4: return './media/four_en_us_1.mp3'
+        case 5: return './media/five_en_us_1.mp3'
+        case 6: return './media/six_en_us_1.mp3'
+        case 7: return './media/seven_en_us_1.mp3'
+        case 8: return './media/eight_en_us_1.mp3'
+        case 9: return './media/nine_en_us_1.mp3'
         default:
           console.log('Error - no match');
           exit(1)  
